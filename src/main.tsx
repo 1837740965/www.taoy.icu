@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import Router from './router'
+import './index.css'
 import 'tailwindcss/tailwind.css'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

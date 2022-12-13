@@ -1,5 +1,5 @@
 import InlineBlog from '@/components/InlineBlog'
-
+import YearBlock from '@/components/YearBlock'
 export default function Blog() {
   const blogs = Array.from(
     { length: 6 },
@@ -7,9 +7,16 @@ export default function Blog() {
   )
   return (
     <div>
-      {blogs.map((blog) => (
-        <InlineBlog title={blog} date={new Date()} key={blog} />
-      ))}
+      <YearBlock year={2022}>
+        {blogs.map((blog) => (
+          <InlineBlog title={blog} date={new Date()} key={blog} />
+        ))}
+      </YearBlock>
+      <YearBlock year={2021}>
+        {blogs.map((blog) => (
+          <InlineBlog title={blog} date={new Date()} key={blog} />
+        ))}
+      </YearBlock>
     </div>
   )
 }

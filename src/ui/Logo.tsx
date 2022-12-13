@@ -1,6 +1,14 @@
-export default function Logo() {
+import clsx from 'clsx'
+
+interface Props
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+  > {}
+
+export default function Logo({ className, ...rest }: Props) {
   return (
-    <div className="inline-block">
+    <div {...rest} className={clsx('inline-block', className)}>
       <h1 className="flex justify-between text-xl font-bold">
         <span>砂</span>
         <span>絮</span>

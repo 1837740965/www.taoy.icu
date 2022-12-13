@@ -8,11 +8,7 @@ interface Props
 
 export default function JumpLink({ href, children }: Props) {
   return (
-    <a
-      href={href}
-      target="_blank"
-      className="text-sm text-blue-400 font-bold px-1"
-    >
+    <a href={href} target="_blank" className="text-blue-400 px-1">
       {children}
     </a>
   )

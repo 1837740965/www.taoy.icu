@@ -1,7 +1,7 @@
 import JumpLink from '@/components/JumpLink'
 
 const Block = ({ children }: { children?: React.ReactNode }) => (
-  <div className="text-gray-600 leading-8 break-words mb-10">{children}</div>
+  <div className="text-gray-500 leading-8 break-all mb-10">{children}</div>
 )
 
 export default function About() {
@@ -9,13 +9,13 @@ export default function About() {
     <div>
       <Block>
         Hello!
-        我是砂絮糖(站名),一名全栈工程师,喜欢编码,阅读,游戏,和看电影。欢迎来到我的网站,你可以通过网站底部的联系方式来找。个人喜欢简约风格,素材来自于
+        我是砂絮糖(站名),一名全栈工程师,喜欢编码,阅读,游戏,和看电影。欢迎来到我的网站,你可以通过网站底部的联系方式来找。个人喜欢简约风格,网站素材来自于
         <JumpLink href="https://dribbble.com/shots/18432052-Framer-Template-Blog">
           Dribble
         </JumpLink>
         如果你想使用我的网站当模板,可以使用git克隆下来,修改成属于你自己的网站😊。
         <div className="mt-6 px-4 py-2 text-sm rounded-md bg-gray-100">
-          git clone https://fontawesome.com/icons/qq?s=&f=brands
+          git clone https://github.com/1837740965/www.taoy.icu.git
         </div>
       </Block>
       <Block>
