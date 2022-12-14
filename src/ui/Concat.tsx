@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faQq } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import JumpLink from '@/components/JumpLink'
 
 type LinkIconProps = {
   href: string
@@ -26,8 +27,10 @@ export default function Concat() {
   return (
     <ul className="inline-flex">
       {LinkIcons.map((linkIcon) => (
-        <li className="px-2 text-gray-600" key={linkIcon.href}>
-          <a href={linkIcon.href}>{linkIcon.icon}</a>
+        <li className="px-2" key={linkIcon.href}>
+          <JumpLink href={linkIcon.href} className="text-gray-600">
+            {linkIcon.icon}
+          </JumpLink>
         </li>
       ))}
     </ul>

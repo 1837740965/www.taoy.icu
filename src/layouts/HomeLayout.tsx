@@ -12,26 +12,18 @@ interface Props
   children?: React.ReactNode
 }
 
-const titleMeta: Record<string, string | React.ReactNode> = {
-  // '/': <Logo />
-}
-
 export default function HomeLayout({ children, className, ...rest }: Props) {
   const location = useLocation()
 
   const [title, setTitle] = useState<string | React.ReactNode>()
 
   useEffect(() => {
-    if (titleMeta.hasOwnProperty(location.pathname)) {
-      setTitle(titleMeta[location.pathname])
-    } else {
-      const route = navRoutes.find(
-        (route) =>
-          `${route.path?.startsWith('/') ? route.path : '/' + route.path}` ===
-          location.pathname
-      )
-      route && setTitle(route?.title)
-    }
+    const route = navRoutes.find(
+      (route) =>
+        `${route.path?.startsWith('/') ? route.path : '/' + route.path}` ===
+        location.pathname
+    )
+    route && setTitle(route?.title)
   }, [location])
 
   return (

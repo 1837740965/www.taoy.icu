@@ -12,7 +12,7 @@ interface Props
 export default function W({ children, className, ...rest }: Props) {
   return (
     <section className={clsx('p-10 md:p-20', className)} {...rest}>
-      <div className="flex flex-col max-w-[600px] min-h-[calc(100vh-80px)] md:min-h-[calc(100vh-160px)] mx-auto">
+      <div className="flex flex-col max-w-[600px] min-h-[calc(100vh-20rem)] md:min-h-[calc(100vh-40prem)] mx-auto">
         {children}
       </div>
     </section>
